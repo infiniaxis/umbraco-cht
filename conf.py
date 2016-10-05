@@ -34,10 +34,10 @@ import os
 
 # Various settings to pass to templates:
 html_context = {
-#   "google_analytics_id" : 'UA-36028965-1',
-#   "disqus_shortname" : 'labibi',
-   "github_base_account" : 'infiniaxis',
-   "github_project" : 'umbraco-cht'
+   "google_analytics_id" : 'UA-85199427-2',
+   "disqus_shortname" : 'umbraco-cht'
+#   "github_base_account" : 'infiniaxis',
+#   "github_project" : 'umbraco-cht'
 }
 
 # If your documentation needs a minimal Sphinx version, state it here.
