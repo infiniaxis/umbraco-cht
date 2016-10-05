@@ -59,12 +59,10 @@
       ``<smtp configSource="WebMail.secret.config" />``
 
 
-
-
 細部調整：
 
-- 進入 Developer -> Health Check -> 執行 Check All Group
-
+- 管理後台進入 Developer -> Health Check -> 執行 Check All Group
+- 檔案 web.config 中改回 ``<customErrors mode="Remote" />``
 
 網頁部署設定
 ----------------
