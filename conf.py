@@ -25,20 +25,20 @@ import os
 # Building on Read the Docs
 # on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
 # otherwise, readthedocs.org uses their theme by default, so no need to specify it
-#on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+ 
+if on_rtd: 			# Various settings to pass to templates:
+    html_context = { 
+    	"google_analytics_id" : 'UA-85199427-2', 
+    	"disqus_shortname" : 'umbraco-cht' 
+    	}
+else:				# only import and set the theme if we're building docs locally
+	import sphinx_rtd_theme
+	html_theme = 'sphinx_rtd_theme'
+	html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
-#if not on_rtd:  # only import and set the theme if we're building docs locally
-#    import sphinx_rtd_theme
-#    html_theme = 'sphinx_rtd_theme'
-#    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
-# Various settings to pass to templates:
-html_context = {
-   "google_analytics_id" : 'UA-85199427-2',
-   "disqus_shortname" : 'umbraco-cht'
-#   "github_base_account" : 'infiniaxis',
-#   "github_project" : 'umbraco-cht'
-}
+
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
@@ -175,7 +175,6 @@ todo_include_todos = False
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-html_style = 'labibi.css'
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -225,7 +224,7 @@ html_style = 'labibi.css'
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #
-# html_show_copyright = True
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the

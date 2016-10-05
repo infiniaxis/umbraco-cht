@@ -9,11 +9,6 @@
 {#  set in conf.py: google_analytics_id = 'UA-36028965-1' #}
 {#  set in conf.py: disqus_shortname = 'labibi' #}
 
-{# set these in conf.py:
-  github_base_account = 'ctb'
-  github_project = 'labibi'
-#}
-
 {%- set render_sidebar = 0 %}
 
 {##################################################}
@@ -23,52 +18,7 @@
 {% block footer %}
 {{ super() }}
 
-{# Add plone-derived 'edit me' sticky note #}
-{% if github_base_account %}
-<div id="editor-trap">
-      <h3>Edit this document!</h3>
-
-      <p>
-        This file can be edited directly through the Web. Anyone can
-        update and fix errors in this document with few clicks --
-        no downloads needed.
-      <p>
-
-      <ol>
-
-        <li>
-          Go to
-        <a href="https://github.com/{{ github_base_account }}/{{ github_project }}/blob/master/{{ pagename }}.rst">
-          {{ title }}
-        </a> on GitHub.
-      </li>
-
-        <li>
-        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
-      </li>
-
-      <li>
-        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
-        you made the changes. Press the <b>Propose file change</b> button next to it when done.
-      </li>
-
-      <li>
-        Then click <b>Send a pull request</b>.
-      </li>
-
-      <li>
-        Your changes are now queued for review under the project's <a href="https://github.com/{{ github_base_account }}/{{ github_project }}/pulls">Pull requests</a> tab on GitHub!
-      </li>
-      </ol>
-
-      <p>
-        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
-      </p>
-
-  </div>
-
-{% endif %}
-
+{% if google_analytics_id %}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -79,6 +29,7 @@
   ga('send', 'pageview');
 
 </script>
+{% endif %}
 
 {% endblock %}
 
@@ -107,35 +58,13 @@
 
 {% block extrahead %}
 
-{% if github_base_account %}
-<script src="{{ pathto('_static/labibi.js', 1) }}"></script>
-{% else %}
-<style type="text/css">
-<!-- github-based editing disabled; set github_base_account
-     and github_project -->
-#editor-trap.toggled {
-  display: none;
-}
-</style>
-{% endif %}
-
 {% endblock %}
 
 {%- block body %}
   {{ super() }}
 
 <hr>
-
-<font size="-1"><b>LICENSE:</b>
-This documentation and all textual/graphic site content is licensed
-under the <a href='http://creativecommons.org/publicdomain/zero/1.0/'>
-Creative Commons - 0 License
-(CC0)</a> -- <a href='https://github.com/ngs-docs/angus'>fork @
-github</a>.  Presentations (PPT/PDF) and PDFs are the property of
-their respective owners and are under the terms indicated within the
-presentation.</font>
-
-<hr>
+本著作係採用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">創用 CC 姓名標示 4.0 國際 授權條款</a>授權 | 2016 永心@<a href="http://wellace.org">未了石公司</a>
 
 {% if disqus_shortname %}
   {{ comments() }}
