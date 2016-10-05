@@ -8,7 +8,7 @@ Umbraco 後台的開發頁中，有許多擴充元件包可以安裝，在這裡
 單獨部落格
 ==========
 
-元件名稱：Articulate（`連結 <https://our.umbraco.org/projects/starter-kits/articulate/>`_\ ）
+元件名稱：`Articulate`_
 
 -  到後台開發頁點選擴展包，安裝 Articulate
 -  後台設置頁 -> Partial Views -> MainNavigation / BottomNavigation ->
@@ -19,4 +19,12 @@ Umbraco 後台的開發頁中，有許多擴充元件包可以安裝，在這裡
 Robots.txt 編輯器
 ====================
 
-元件名稱：Robots.txt Editor（`連結 <http://our.umbraco.org/projects/developer-tools/robotstxt-editor>`_\ ）
+元件名稱：`Robots.txt Editor`_
+
+安裝後可在後台管理修改 robots.txt
+
+- 需要在 Asp.net 中修改 robots.txt 的檔案權限才能使用
+
+
+.. _Articulate: https://our.umbraco.org/projects/starter-kits/articulate/
+.. _Robots.txt Editor: http://our.umbraco.org/projects/developer-tools/robotstxt-editor
