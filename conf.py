@@ -30,7 +30,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd: 			# Various settings to pass to templates:
     html_context = { 
     	"google_analytics_id" : 'UA-85199427-2', 
-    	"disqus_shortname" : 'umbraco-cht' 
+    	"disqus_shortname" : 'umbraco-cht',
     }
     latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
@@ -140,7 +140,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # If true, the current module name will be prepended to all description
 # unit titles (such as .. function::).
 #
-# add_module_names = True
+add_module_names = False
 
 # If true, sectionauthor and moduleauthor directives will be shown in the
 # output. They are ignored by default.
