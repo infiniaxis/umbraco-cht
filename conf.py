@@ -16,7 +16,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
+import sys, os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -28,10 +28,6 @@ import os
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
  
 if on_rtd: 			# Various settings to pass to templates:
-    html_context = { 
-    	"google_analytics_id" : 'UA-85199427-2', 
-    	"disqus_shortname" : 'umbraco-cht',
-    }
     latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #'papersize': 'letterpaper',
@@ -58,11 +54,23 @@ if on_rtd: 			# Various settings to pass to templates:
     \AtEndDocument{\end{CJK}}
     ''',
     }
+    html_context = { 
+    	"google_analytics_id" : 'UA-85199427-2', 
+    	"disqus_shortname" : 'umbraco-cht',
+    }
 else:				# only import and set the theme if we're building docs locally
 	import sphinx_rtd_theme
 	html_theme = 'sphinx_rtd_theme'
 	html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-
+	latex_elements = {
+        'papersize' : 'a4paper',
+        'utf8extra' : '',
+        'inputenc'  : '',
+        'babel'     : r'''\usepackage[english]{babel}''',
+        'preamble' : r'''
+        \usepackage{ctex}
+        ''',
+    }
 
 
 
