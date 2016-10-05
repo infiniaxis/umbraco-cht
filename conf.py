@@ -58,6 +58,7 @@ if on_rtd: 			# Various settings to pass to templates:
     	"google_analytics_id" : 'UA-85199427-2', 
     	"disqus_shortname" : 'umbraco-cht',
     }
+    html_theme = 'default'
 else:				# only import and set the theme if we're building docs locally
 	import sphinx_rtd_theme
 	html_theme = 'sphinx_rtd_theme'
