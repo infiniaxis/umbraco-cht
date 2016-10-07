@@ -8,6 +8,7 @@
 
 目前對應 Umbraco 版本 7.5.x.
 
+---
 
 This is the source files of a manual for the Umbraco introduction, please go directly to [http://umbraco-cht.rtfd.io/](http://umbraco-cht.rtfd.io/) for reading. 
 
