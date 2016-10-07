@@ -1,4 +1,3 @@
-=======================
 安裝步驟與秘訣
 =======================
 
@@ -6,7 +5,7 @@
 
 
 下載檔案
-================
+----------------
 
 設定專案：
 
@@ -33,7 +32,7 @@
 
 
 執行安裝程式
-======================
+----------------
 
 啟動網頁：
 
@@ -49,14 +48,12 @@
 
 
 安裝收尾
-===========
+----------------
 
 如果將網頁原始碼放在版本管理中，記得調整安全相關項目：
 
-- web.config 中 connectionStrings 移到另外的檔案，並改成
-   ``<connectionStrings configSource="Web.Secret.config"/>``
-- web.config 中 email smtp 設定移到另外的檔案，改成
-      ``<smtp configSource="WebMail.secret.config" />``
+- web.config 中 connectionStrings 移到另外的檔案，並改成 ``<connectionStrings configSource="Web.Secret.config"/>``
+- web.config 中 email smtp 設定移到另外的檔案，改成 ``<smtp configSource="WebMail.secret.config" />``
 
 
 細部調整：
@@ -64,7 +61,8 @@
 - 管理後台進入 Developer -> Health Check -> 執行 Check All Group
 - 檔案 web.config 中改回 ``<customErrors mode="Remote" />``
 
-網頁部署設定
+
+網頁部署
 ----------------
 
 設定目錄權限：
@@ -76,6 +74,8 @@
 同步檔案：
 
 -  自動化同步其他檔案（\ `網頁教學 <https://www.asp.net/mvc/overview/deployment/visual-studio-web-deployment/deploying-extra-files>`__\ ）
+
+
 
 .. _安裝說明網頁: https://our.umbraco.org/documentation/Getting-Started/Setup/Install/
 .. _安裝方式: https://our.umbraco.org/documentation/Getting-Started/Setup/Install/install-umbraco-with-nuget

@@ -26,10 +26,10 @@ import sys, os
 # on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
 # otherwise, readthedocs.org uses their theme by default, so no need to specify it
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
- 
+
 if on_rtd: 			# Various settings to pass to templates:
-    html_context = { 
-    	"google_analytics_id" : 'UA-85199427-2', 
+    html_context = {
+    	"google_analytics_id" : 'UA-85199427-2',
     	"disqus_shortname" : 'umbraco-cht',
     }
     html_theme = 'default'
@@ -66,7 +66,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'umbraco-cht'
+project = u'Umbraco 中文介紹說明'
 copyright = u'2016, 永心'
 author = u'永心'
 
@@ -74,16 +74,16 @@ author = u'永心'
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
-# The short X.Y version.
-
-try:
-    f = open("VERSION", "r")
-    release = f.read().rstrip()
-    # The short X.Y version.
-    version = release
-except:
-    release = 'X.Y.Z-unknown'
-    version = 'X.Y'
+file = open("VERSION", "r")
+vers = file.read().rstrip().split('.')
+file.close()
+vers[3] = int(vers[3]) + 1
+release = ".".join(str(x) for x in vers)
+version = release
+print("VERSION = " + version)
+file = open("VERSION", "w")
+file.write(".".join(str(x) for x in vers))
+file.close()
 
 # version = u'7.0'
 # The full version, including alpha/beta/rc tags.
@@ -288,7 +288,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'umbraco-cht.tex', u'umbraco-cht Documentation',
+    (master_doc, 'umbraco-cht.tex', u'Umbraco 中文介紹說明',
      u'永心', 'manual'),
 ]
 
@@ -330,7 +330,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'umbraco-cht', u'umbraco-cht Documentation',
+    (master_doc, 'umbraco-cht', u'Umbraco 中文介紹說明',
      [author], 1)
 ]
 
@@ -345,7 +345,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'umbraco-cht', u'umbraco-cht Documentation',
+    (master_doc, 'umbraco-cht', u'Umbraco 中文介紹說明',
      author, 'umbraco-cht', 'One line description of project.',
      'Miscellaneous'),
 ]
