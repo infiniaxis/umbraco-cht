@@ -68,12 +68,12 @@
 設定目錄權限：
 
 -  按照\ `官網連結`_\ 將不需要最高權限的資料夾改回來
--  自動化權限設定：參考\ `網頁教學`_\ 設定，新增檔案 ``<projectName>.wpp.targets`` 在專案資料夾中，之後執行網頁部署（Web Deploy）時皆可自動設定
+-  自動化權限設定：參考\ `網頁教學`_\ 設定，新增檔案 ``<projectName>.wpp.targets`` 在專案資料夾中，之後執行網頁部署（Web Deploy）時皆可自動設定，可以 :download:`下載範本檔案 <_static/projectname.wpp.targets>`
 
 
 同步檔案：
 
--  自動化同步其他檔案（\ `網頁教學 <https://www.asp.net/mvc/overview/deployment/visual-studio-web-deployment/deploying-extra-files>`__\ ）
+-  自動化同步其他檔案（參考\ `網頁說明 <https://www.asp.net/mvc/overview/deployment/visual-studio-web-deployment/deploying-extra-files>`_\ ），或 :download:`下載範本檔案 <_static/projectname-WebDeploy.pubxml>`
 
 
 

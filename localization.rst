@@ -10,7 +10,7 @@
 
 從網站下載語言檔案並放到專案資料夾中：
 
-- 下載位置分別是 `zh_tw.xml`_ 和 `zh.xml`_
+- 下載需要的檔案 :download:`zh_tw.xml <Lang/zh_tw.xml>` 或/和 :download:`zh.xml <Lang/zh.xml>`
 - 新增這兩個檔案到 C:\\example\\example\\Umbraco\\Config\\Lang
 - Umbraco 管理後台左上方，按下使用者圖示，點選 Edit，在 Language 中修改成自己的語言
 
